@@ -2,7 +2,17 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>Restaurant Review</h1>
+
+<div id="content"></div>
+
+@section Scripts {
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js">
+</script>
+<script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js">
+</script>
+
+<script src="~/Scripts/Lab8.jsx"></script>
+}
