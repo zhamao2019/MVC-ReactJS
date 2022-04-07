@@ -14,4 +14,4 @@
         </ul>
     </div>
 );
-ReactDOM.render(review, document.getElementById("content"));
+ReactDOM.render(<Reviews />, document.getElementById("content"));
