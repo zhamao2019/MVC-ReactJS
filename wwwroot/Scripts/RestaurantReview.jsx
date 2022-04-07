@@ -7,9 +7,11 @@
             address: this.props.data.address,
             summary: this.props.data.summary,
             rating: this.props.data.rating,
+            food: this.props.data.foodType,
             showConfirm: { display: "none" }
         };
     }
+
     render() {
         var handleAddressChange = (newAddress) => {
             this.setState({ address: newAddress });
@@ -17,17 +19,23 @@
         var handleSummaryChange = (e) => {
             this.setState({ summary: e.target.value });
         }
+        //var handleRatingChange = (e) => {
+        //    this.setState({ rating: { currentRating: e.target.value } });
+        //}
         var handleRatingChange = (e) => {
-            this.setState({ rating: { currentRating: e.target.value } });
+            this.setState({ rating: e.target.value });
         }
         var submitChange = () => {
             var restInfo = {
-                id: this.state.id, name: this.state.name,
-                address: this.state.address,
-                summary: this.state.summary, rating: this.state.rating
+                Id: this.state.id,
+                Name: this.state.name,
+                Address: this.state.address,
+                Summary: this.state.summary,
+                Rating: this.state.rating,
+                FoodType: this.state.food,
             }
             $.ajax({
-                url: RestaurantReviewsURL,
+                url: RestaurantReviewsURL + "/" + this.state.id,
                 type: 'PUT',
                 contentType: "application/json",
                 data: JSON.stringify(restInfo),
@@ -38,9 +46,11 @@
                     console.log(settings);
                     console.log(event);
                     console.log(request);
+                    console.log(restInfo);
                 }
             });
         }
+
         return (
             <div className="row">
                 <div className="col‐md‐9">
@@ -64,7 +74,7 @@
                             </div>
                             <div className="col‐md‐10">
                                 <select id="drpRating" className="form‐control"
-                                    value={this.state.rating.currentRating}
+                                    value={this.state.rating}
                                     onChange={handleRatingChange}>
                                     <option key="1" value="1">1</option>
                                     <option key="2" value="2">2</option>

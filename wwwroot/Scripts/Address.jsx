@@ -20,9 +20,11 @@
             paddingBottom: 10,
             paddingTop: 5
         };
+
         function makeProvinceOptions(x) {
-            return <option key={x.code} value={x.code}>{x.name}</option >
+            return <option key={x.code} value={x.code}>{x.name}</option>
         }
+
         var handlerChange = (e) => {
             var addr = this.props.address;
             if (e.target.id == "txtStreet")
@@ -30,11 +32,12 @@
             else if (e.target.id == "txtCity")
                 addr.city = e.target.value;
             else if (e.target.id == "drpProvince")
-                addr.provstate = e.target.value;
+                addr.provinceState = e.target.value;
             else if (e.target.id == "txtPostalCode")
-                addr.postalzipcode = e.target.value;
+                addr.postalCode = e.target.value;
             this.props.onAddressChange(addr);
         }
+
         return (
             <div style={addrBlockStyle}>
                 <div className="row form‐group">
@@ -61,7 +64,7 @@
                     </div>
                     <div className="col‐md‐5">
                         <select type="text" id="drpProvince" className="form‐control"
-                            onChange={handlerChange} value={this.props.address.provstate}>
+                            onChange={handlerChange} value={this.props.address.provinceState}>
                             {provinces.map(makeProvinceOptions)}
                         </select>
                     </div>
@@ -71,7 +74,7 @@
                     <div className="col‐md‐3">
                         <input type="text" id="txtPostalCode" className="form‐control"
                             onChange={handlerChange}
-                            value={this.props.address.postalzipcode} />
+                            value={this.props.address.postalCode} />
                     </div>
                 </div>
             </div>);

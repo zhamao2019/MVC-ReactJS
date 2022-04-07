@@ -3,6 +3,7 @@
         super(props);
         this.state = { data: [] };
     }
+
     componentDidMount() {
         $.ajax({
             url: RestaurantReviewsURL,
@@ -20,9 +21,11 @@
             }
         });
     }
+
     render() {
         function makeRestaurantReviewList(x, index) {
             return <RestaurantReview data={x} key={index} />;
+            console.log(this.state.data.map(makeRestaurantReviewList));
         }
         return (
             <div>

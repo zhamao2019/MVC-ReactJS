@@ -1,1 +1,1 @@
-﻿const RestaurantReviewsURL = "http://localhost/RestaurantReviewServiceAPI/RestaurantReview";
+﻿const RestaurantReviewsURL = "http://localhost/RestaurantReviewServiceApi/RestaurantReview";
