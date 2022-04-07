@@ -58,22 +58,22 @@
                         <legend>{this.state.name}</legend>
                         <Address address={this.state.address}
                             onAddressChange={handleAddressChange} />
-                        <div className="row form‐group">
-                            <div className="col‐md‐2 label‐align">
+                        <div className="row form-group">
+                            <div className="col-md-2 col-form-label">
                                 <label htmlFor="txtSummary">Summary:</label>
                             </div>
                             <div className="col‐md‐10">
-                                <textarea id="txtSummary" className="form‐control"
+                                <textarea id="txtSummary" className="form-control"
                                     rows="4" value={this.state.summary}
                                     onChange={handleSummaryChange}></textarea>
                             </div>
                         </div>
-                        <div className="row form‐group">
-                            <div className="col‐md‐2 label‐align">
+                        <div className="row form-group">
+                            <div className="col‐md‐2 col-form-label">
                                 <label htmlFor="drpRating">Rating: </label>
                             </div>
                             <div className="col‐md‐10">
-                                <select id="drpRating" className="form‐control"
+                                <select id="drpRating" className="form-control col-form-label"
                                     value={this.state.rating}
                                     onChange={handleRatingChange}>
                                     <option key="1" value="1">1</option>
@@ -84,13 +84,14 @@
                                 </select>
                             </div>
                         </div>
-                        <div className="row form‐group">
-                            <div className="col‐md‐2 label‐align">
-                                <button className="btn btn‐primary" type="button"
+                        <br/>
+                        <div className="row form-group">
+                            <div className="col‐md‐2 col-form-label">
+                                <button className="btn btn-primary" type="button"
                                     onClick={submitChange}>Save</button>
                             </div>
                             <div className="col‐md‐10" id="divConfirmation">
-                                <span className="form‐control alert‐success"
+                                <span className="form-control alert alert-success"
                                     style={this.state.showConfirm} >Update Saved
                                 </span>
                             </div>

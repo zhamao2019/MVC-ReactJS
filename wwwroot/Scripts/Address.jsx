@@ -41,38 +41,38 @@
         return (
             <div style={addrBlockStyle}>
                 <div className="row form‐group">
-                    <div className="col‐md‐2 label‐align">
+                    <div className="col‐md‐2 col-form-label">
                         <label htmlFor="txtStreet">Street:</label>
                     </div>
                     <div className="col‐md‐10">
-                        <input type="text" id="txtStreet" className="form‐control"
+                        <input type="text" id="txtStreet" className="form-control"
                             onChange={handlerChange} value={this.props.address.street} />
                     </div>
                 </div>
                 <div className="row form‐group">
-                    <div className="col‐md‐2 label‐align">
+                    <div className="col‐md‐2 col-form-label">
                         <label htmlFor="txtCity">City:</label>
                     </div>
                     <div className="col‐md‐10">
-                        <input type="text" id="txtCity" className="form‐control"
+                        <input type="text" id="txtCity" className="form-control"
                             onChange={handlerChange} value={this.props.address.city} />
                     </div>
                 </div>
                 <div className="row form‐group">
-                    <div className="col‐md‐2 label‐align">
+                    <div className="col‐md‐2 col-form-label">
                         <label htmlFor="txtProvince">Province:</label>
                     </div>
                     <div className="col‐md‐5">
-                        <select type="text" id="drpProvince" className="form‐control"
+                        <select type="text" id="drpProvince" className="form-control"
                             onChange={handlerChange} value={this.props.address.provinceState}>
                             {provinces.map(makeProvinceOptions)}
                         </select>
                     </div>
-                    <div className="col‐md‐2 label‐align">
+                    <div className="col‐md‐2 col-form-label">
                         <label htmlFor="txtPostalCode">Postal Code:</label>
                     </div>
                     <div className="col‐md‐3">
-                        <input type="text" id="txtPostalCode" className="form‐control"
+                        <input type="text" id="txtPostalCode" className="form-control"
                             onChange={handlerChange}
                             value={this.props.address.postalCode} />
                     </div>
